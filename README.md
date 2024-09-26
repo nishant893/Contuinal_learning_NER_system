@@ -135,6 +135,6 @@ These results show that the fine-tuned models through continual learning maintai
 - `process_and_evaluate_model(data_file_path, model_path)`: End-to-end function to process data and evaluate a model.
 
 ## Note
-
+For code and concepts explanation : https://medium.com/@nishantk613/building-a-continual-learning-ner-model-with-spacy-f0aa6dfedfa4
 Make sure to adjust file paths and configurations as needed for your specific setup and data.
 
