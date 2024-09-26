@@ -20,6 +20,7 @@ from spacy.tokens import DocBin
 from spacy.util import filter_spans
 from sklearn.model_selection import train_test_split
 
+from sklearn.model_selection import train_test_split
 
 #!python -m spacy download en_core_web_lg
 
@@ -72,8 +73,6 @@ def add_entities_from_tags(dataframe, tag_column):
     return dataframe
 
 
-
-from sklearn.model_selection import train_test_split
 
 def split_data_into_sets(data, test_size=0.2, validation_size=0.5, random_state=0):
     """
