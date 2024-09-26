@@ -21,6 +21,27 @@ Continual learning is an approach in machine learning where a model learns conti
 
 Our implementation demonstrates these properties through sequential fine-tuning on different datasets (G1, G2, G3) and evaluating performance across all datasets after each training phase.
 
+## The Dataset and Objective
+
+Our dataset consists of three separate CSV files (G1, G2, G3) with minimal overlap between them. Each dataset contains text and corresponding entity tags. Here's an example of what the data might look like:
+
+```
+            text                                                         tags
+The patient was prescribed Metformin for their diabetes.                ,18:27:Treatment,36:44:Chronic Disease
+A new immunotherapy treatment shows promise for lung cancer patients.   ,4:26:Treatment,51:62:Cancer
+Peanut allergy sufferers should avoid products containing traces of nuts.,0:13:Allergy,54:58:Allergy
+```
+
+The objective is to correctly identify and classify entities in the text into one of five categories: Treatment, Chronic Disease, Cancer, Allergy, or Other.
+
+These three datasets define three different NER tasks (T1, T2, T3) with the same set of labels but different entities. For example:
+
+- Task T1: Recognize entities in dataset G1
+- Task T2: Recognize entities in dataset G2
+- Task T3: Recognize entities in dataset G3
+
+We'll keep aside 20% of each dataset as a test set for evaluation purposes.
+
 ## Prerequisites
 
 - Python 3.x
